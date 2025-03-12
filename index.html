@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сюрприз 🎵</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+        .full-screen-button {
+            width: 100vw;
+            height: 100vh;
+            background: url('ava.jpeg') no-repeat center center/cover;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button class="full-screen-button" onclick="playSong()"></button>
+    <audio id="audio" src="song.mp3"></audio>
+    <script>
+        function playSong() {
+            let audio = document.getElementById('audio');
+            audio.volume = 1.0; // Устанавливаем громкость на максимум (1.0 = 100%)
+            audio.play();
+        }
+    </script>
+</body>
+</html>
